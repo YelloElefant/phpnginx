@@ -27,7 +27,7 @@ services:
   db:
     container_name: db
     image: mysql
-    restart: unless-topped
+    restart: unless-stopped
     environment:
         MYSQL_ROOT_PASSWORD: humpfree
         MYSQL_DATABASE: PHP
