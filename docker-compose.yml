@@ -27,7 +27,7 @@ services:
   db:
     container_name: db
     image: mysql
-    restart: always
+    restart: unless-topped
     environment:
         MYSQL_ROOT_PASSWORD: humpfree
         MYSQL_DATABASE: PHP
@@ -39,7 +39,7 @@ services:
 
   adminer:
     image: adminer
-    restart: always
+    restart: unless-stopped
     networks:
       - internal
     ports:
